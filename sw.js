@@ -1,4 +1,4 @@
-const CACHE='digishot-v76-fixed';
+const CACHE='digishot-v8-script-fixed';
 const ASSETS=['./','./index.html','./manifest.json','./sw.js'];
 self.addEventListener('install', e => {
   self.skipWaiting();

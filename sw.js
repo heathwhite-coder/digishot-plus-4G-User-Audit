@@ -1,4 +1,4 @@
-const CACHE_NAME = 'digishot-audit-v10';
+const CACHE_NAME = 'digishot-audit-v11';
 const ASSETS = ['./','./index.html','./manifest.json'];
 self.addEventListener('install', event => {
   event.waitUntil(caches.open(CACHE_NAME).then(cache => cache.addAll(ASSETS)));

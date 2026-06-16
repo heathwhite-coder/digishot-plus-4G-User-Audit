@@ -1,6 +1,6 @@
 {
-  "name": "DigiShot Plus 4G Audit",
-  "short_name": "DigiShot Audit",
+  "name": "DigiShot Plus 4G User Audit",
+  "short_name": "DigiShot User Audit",
   "start_url": "./index.html",
   "display": "standalone",
   "background_color": "#f4f6f8",

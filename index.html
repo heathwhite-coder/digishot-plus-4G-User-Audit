@@ -59,11 +59,15 @@ function certificateHtml(){const f=new FormData(document.getElementById('auditFo
 function printAudit(){saveAudit();const f=new FormData(document.getElementById('auditForm'));const name=((f.get('firstName')||'')+' '+(f.get('surname')||'')).trim();const date=f.get('auditDate')||new Date().toISOString().slice(0,10);openPrint(auditReportHtml(f,name,date))}
 function printCert(){saveAudit();openPrint(certificateHtml())}
 if('serviceWorker' in navigator){navigator.serviceWorker.register('sw.js').catch(()=>{})}
- const dateField = document.querySelector('[name="auditDate"]');
-if (dateField && !dateField.value) {
-  dateField.value = new Date().toISOString().slice(0,10);
-}
- loadAudit();show(0);
+ loadAudit();
+show(0);
+
+setTimeout(() => {
+  const dateField = document.querySelector('[name="auditDate"]');
+  if (dateField && !dateField.value) {
+    dateField.value = new Date().toISOString().slice(0,10);
+  }
+}, 100); 
 </script>
 </body>
 </html>
